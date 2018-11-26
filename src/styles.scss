@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+// colors
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,500,700 ');
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$bg-color:#A29FF7;
+// #C380F7;
+
+
+body{
+    background-color: $bg-color;
+}
+*{
+    font-family: Muli,Poppins;
+}
