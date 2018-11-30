@@ -14,12 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 // components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+
 //components
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+   
   ],
   imports: [
     BrowserModule, AppRoutingModule,BrowserAnimationsModule,
