@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 // components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 //components
 
@@ -23,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
   declarations: [
     AppComponent,
     LoginComponent,
+    SignupComponent,
    
   ],
   imports: [
