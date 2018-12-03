@@ -5,15 +5,17 @@
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
-  max-height: 900px;
-  margin-top: 145px;
-  height: 650px;
+  margin-top: 100px;
+  height: 620px;
+  border-radius: 20px;
+
 }
 .card-title{
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 100px;
     font-weight: bold;
-    font-family: Muli,Poppins;
+    font-family: Poppins;
+    padding-top: 30px;
 }
 
 // form fields
@@ -23,54 +25,47 @@
   width: 100%;
 }
 
-.full-width {
-  width: 100%;
-}
-// .form-control{
-//     margin-left:40px;
-// }
-.mat-form-field {
-  border-radius: 60px;
-  width: 100%;
-}
-// input[type=text]{
-//     width: 300px;
-//     height: 40px;
-//     border: 1px solid;
-//     border-radius:65px;
 
-//     text-align: center;
-//     // border: none;
 
-// }
-// input[type=password]{
-//     width: 300px;
-//     height: 40px;
-//     border: 1px solid;
-//     border-radius:65px;
-//     // box-shadow: 20px;
-//     text-align: center;
-// }
+mat-form-field {
+//  padding-top: 10px;
+  width: 300px;
+}
+.auth-form{
+    padding-top: 40px;
+}
+
+.text-btn{
+    padding-top: 20px;
+}
 .btn-cls{
     background-color: #BD59D4;
-    margin-left: 150px;
-    border-radius: 20px;
+
     color: #fff;
-    max-width: 100px;
+    width: 150px;
+    border-radius: 30px;
+    height: 45px;
+
+
 }
-//fab-flat -buttons
-.example-button-row button,
-.example-button-row a {
-  margin-right: 8px;
+
+/deep/ .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+  border: none;
+  border-radius: 15px;
+   box-shadow: 0px 0px 15px 0px #C0C0C0;
 }
-.btnfab{
-    margin-left: 140px;
-    padding-bottom: 40px;
-}
+
+
+
 .btn-fab{
      background-color: #fff;
      text-align: center;
+
+
+
 }
+
 .font-icon{
 
     font-size: 25px;
@@ -84,8 +79,6 @@
 text-align: center;
  color: #C0C0C0;
 }
-.signup-btn{
-    color: #92808E;
-    padding-bottom: 20px;
-    text-align: center;
+.signupBtn{
+    padding-top: 80px;
 }

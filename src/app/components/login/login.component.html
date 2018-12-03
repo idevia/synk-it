@@ -7,16 +7,16 @@
   </mat-card-header>
 
   <mat-card-content>
-  <form class="auth-form">
+  <form class="auth-form text-center">
 
     <mat-form-field appearance="outline">
-      <mat-label>Enter email</mat-label>
-      <input matInput placeholder="email@domain.com">
+      <mat-label class="matLabel">Enter email</mat-label>
+      <input matInput  placeholder="email@domain.com">
       <mat-icon matSuffix>email</mat-icon>
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Enter password</mat-label>
+    <mat-form-field appearance="outline" class="input-s">
+      <mat-label class="matLabel" >Enter password</mat-label>
       <input matInput type="password" placeholder="Your passwrod">
       <mat-icon matSuffix>lock</mat-icon>
     </mat-form-field>
@@ -25,8 +25,8 @@
       <input class="form-control" type="password" placeholder="password" id="password">
     </mat-form-field> -->
     <!-- <mat-grid-list cols="4" > -->
-      <div class="text-center">
-        <button mat-button mat-raised-button color="primary">SIGN IN</button>
+      <div class="text-center text-btn">
+        <button mat-button mat-raised-button class="btn-cls">SIGN IN</button>
       </div>
     <!-- </mat-grid-list> -->
     </form>
@@ -40,11 +40,12 @@
   <mat-card-actions>
 
     <div class="text-center">
-          <a mat-fab class="btn-fab" routerLink="."><i class="fa fa-facebook font-icon" aria-hidden="true"></i></a>
-          <a mat-fab class="btn-fab" routerLink="."><img class="google-icon" src="./assets/images/image.png" alt="google"></a>
+          <a mat-fab class="btn-fab" routerLink=""><i class="fa fa-facebook font-icon" aria-hidden="true"></i></a>
+          <a mat-fab class="btn-fab" routerLink=""><img class="google-icon" src="./assets/images/image.png" alt="google"></a>
     </div>
-      <div class="signup-btn">
-    <a class="" routerLink="" mat-button>Sign Up</a>
+      <div class="text-center signupBtn">
+    <a mat-flat-button routerLink="signup">Sign Up</a>
       </div>
 </mat-card-actions>
 </mat-card>
+<router-outlet></router-outlet>

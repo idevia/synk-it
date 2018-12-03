@@ -16,10 +16,17 @@ import { AppRoutingModule } from './app-routing.module';
 // components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-// components
+import { SignupComponent } from './components/signup/signup.component';
+
+//components
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+   
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

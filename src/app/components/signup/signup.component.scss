@@ -1,0 +1,81 @@
+// @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+.auth-card {
+  max-width: 400px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  height: 620px;
+  border-radius: 20px;
+
+}
+.card-title{
+    font-size: 20px;
+    margin-left: 100px;
+    font-weight: bold;
+    font-family: Poppins;
+    padding-top: 30px;
+}
+
+// form fields
+// .example-form {
+//   min-width: 150px;
+//   max-width: 500px;
+//   width: 100%;
+// }
+
+
+
+mat-form-field {
+
+  width: 100%;
+
+
+}
+.auth-form{
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.text-btn{
+    padding-top: 20px;
+}
+.btn-cls{
+    background-color: #BD59D4;
+
+    color: #fff;
+    width: 150px;
+    border-radius: 30px;
+    height: 45px;
+}
+
+/deep/ .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+  border: none;
+  border-radius: 15px;
+   box-shadow: 0px 0px 15px 0px #C0C0C0;
+}
+
+.btn-fab{
+     background-color: #fff;
+     text-align: center;
+}
+
+.font-icon{
+
+    font-size: 25px;
+    color:#4267B2;
+}
+.google-icon{
+    height: 25px;
+}
+.text-color{
+    padding-top: 10px;
+text-align: center;
+ color: #C0C0C0;
+}
+.signupBtn{
+    padding-top: 80px;
+}
