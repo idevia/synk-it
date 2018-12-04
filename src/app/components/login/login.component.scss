@@ -10,15 +10,18 @@
   border-radius: 20px;
 
 }
+.headerTitle{
+    justify-content: center;
+}
 .card-title{
     font-size: 20px;
-    margin-left: 100px;
+    
     font-weight: bold;
     font-family: Poppins;
     padding-top: 30px;
 }
 
-// form fields
+
 .form {
   min-width: 150px;
   max-width: 500px;
@@ -28,8 +31,7 @@
 
 
 mat-form-field {
-//  padding-top: 10px;
-  width: 300px;
+  width: 70%;
 }
 .auth-form{
     padding-top: 40px;
@@ -44,7 +46,7 @@ mat-form-field {
     color: #fff;
     width: 150px;
     border-radius: 30px;
-    height: 45px;
+    height: 55px;
 
 
 }
@@ -80,5 +82,5 @@ text-align: center;
  color: #C0C0C0;
 }
 .signupBtn{
-    padding-top: 80px;
+    padding-top: 60px;
 }

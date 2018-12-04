@@ -1,8 +1,8 @@
 <mat-card class="auth-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
+  <mat-card-header class="headerTitle">
 
-    <div mat-card-title  class="card-title">Sign In</div>
+
+    <div mat-card-title  class="card-title ">Sign In</div>
 
   </mat-card-header>
 
@@ -21,14 +21,14 @@
       <mat-icon matSuffix>lock</mat-icon>
     </mat-form-field>
 
-    <!-- <mat-form-field class="example-full-width">
-      <input class="form-control" type="password" placeholder="password" id="password">
-    </mat-form-field> -->
-    <!-- <mat-grid-list cols="4" > -->
+    <div>
+      <a mat-flat-button routerLink="/forgot-password">forgot password ?</a>
+    </div>
+ 
       <div class="text-center text-btn">
         <button mat-button mat-raised-button class="btn-cls">SIGN IN</button>
       </div>
-    <!-- </mat-grid-list> -->
+    
     </form>
 
 
@@ -44,8 +44,7 @@
           <a mat-fab class="btn-fab" routerLink=""><img class="google-icon" src="./assets/images/image.png" alt="google"></a>
     </div>
       <div class="text-center signupBtn">
-    <a mat-flat-button routerLink="signup">Sign Up</a>
+    <a mat-flat-button routerLink="/signup">Sign Up</a>
       </div>
 </mat-card-actions>
 </mat-card>
-<router-outlet></router-outlet>
