@@ -9,6 +9,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
 // angular material  api
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +23,10 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { LinksComponent } from './pages/links/links.component';
+import { DialoglinksComponent } from './pages/links/dialoglinks/dialoglinks.component';
+
 
 //components
 
@@ -27,6 +36,11 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     LoginComponent,
     SignupComponent,
     ForgotPasswordComponent,
+    DashboardComponent,
+    LinksComponent,
+    DialoglinksComponent,
+    
+    
    
   ],
   imports: [
@@ -39,9 +53,17 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     MatInputModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule,
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    LinksComponent,DialoglinksComponent,
+  ],
 })
 export class AppModule {}
