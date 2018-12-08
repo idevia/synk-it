@@ -1,24 +1,24 @@
 <div mat-dialog-content>
   <form>
   <mat-form-field class="dialogForm">
-  <input matInput placeholder=" Name" value="Name"> 
-  
+  <input matInput placeholder=" Name" value="Name">
+
  </mat-form-field>
   <mat-form-field class="dialogForm">
-  <input matInput placeholder=" Add Link" value="Add Link"> 
-  
+  <input matInput placeholder="Add Link" value="Add Link">
+
  </mat-form-field>
 <mat-form-field class="dialogForm">
   <mat-select placeholder="Category"  value="Category" >
     <mat-option value="uncategorized">Uncategorized</mat-option>
-    <!-- <mat-option value="option1">Option 1</mat-option>
+    <mat-option value="option1">Option 1</mat-option>
     <mat-option value="option2">Option 2</mat-option>
-    <mat-option value="option3">Option 3</mat-option> -->
+    <mat-option value="option3">Option 3</mat-option>
   </mat-select>
 </mat-form-field>
 </form>
 </div>
 <div mat-dialog-actions class="dialog-btn">
-  <button mat-button [mat-dialog-close]="" cdkFocusInitial>cancel</button>
-  <button mat-raised-button color="primary" (click)="onNoClick()"  class="">Add Link</button>
+  <button mat-button [mat-dialog-close]="" cdkFocusInitial>Cancel</button>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Add Link</button>
 </div>

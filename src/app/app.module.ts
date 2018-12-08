@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material';
+import { MatCheckboxModule, MatToolbarModule } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
 // angular material  api
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,9 +27,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LinksComponent } from './pages/links/links.component';
 import { DialoglinksComponent } from './pages/links/dialoglinks/dialoglinks.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
-
-//components
 
 @NgModule({
   declarations: [
@@ -39,9 +39,7 @@ import { DialoglinksComponent } from './pages/links/dialoglinks/dialoglinks.comp
     DashboardComponent,
     LinksComponent,
     DialoglinksComponent,
-    
-    
-   
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -58,12 +56,12 @@ import { DialoglinksComponent } from './pages/links/dialoglinks/dialoglinks.comp
     MatListModule,
     MatTableModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatPaginatorModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [
-    LinksComponent,DialoglinksComponent,
-  ],
+  entryComponents: [LinksComponent, DialoglinksComponent]
 })
 export class AppModule {}

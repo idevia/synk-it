@@ -1,27 +1,25 @@
 .example-container {
   position: absolute;
-  top: 0;
+  top: 64px;
   bottom: 0;
   left: 0;
   right: 0;
   background: #eee;
 }
+
 /deep/ .mat-sidenav{
-    background-color: #4C0065;
-    
-    width: 20%
+    // background-color: #4C0065;
+    width: 320px;
 }
 
 /deep/ .mat-nav-list .mat-list-item{
-    color: #eee;
-    
-    
+    // color: #eee;
 }
 /deep/ .mat-nav-list .mat-list-item:hover{
     background-color: grey;
     color: #eee;
-    
-    
+
+
 }
 /deep/ .mat-list-item-content{
     justify-content: center;
