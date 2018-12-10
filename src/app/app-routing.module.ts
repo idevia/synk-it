@@ -14,24 +14,24 @@ const routes: Routes = [
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
-    { path: 'forgot-password', component:ForgotPasswordComponent },
-    { path: 'dashboard', component:DashboardComponent ,
-children: [                         
+    { path: 'forgot-password', component: ForgotPasswordComponent },
+    { path: 'dashboard', component: DashboardComponent ,
+    children: [
             {
                 path: '',
-                redirectTo: 'links',
+                redirectTo: '/links',
                 pathMatch: 'full'
             },
-            {   path:'links', component:LinksComponent,
-                children: [ 
-                    { path: 'all-links', component: AllLinksComponent},
+            {   path: 'links', component: LinksComponent,
+                children: [
+                    { path: 'all', component: AllLinksComponent},
                     { path: 'categories', component: CategoriesComponent},
 
                 ]},
 
         ]},
-    
-]
+];
+
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
