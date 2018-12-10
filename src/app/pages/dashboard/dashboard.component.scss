@@ -12,15 +12,14 @@
     width: 320px;
 }
 
-/deep/ .mat-nav-list .mat-list-item{
-    // color: #eee;
-}
-/deep/ .mat-nav-list .mat-list-item:hover{
-    background-color: grey;
-    color: #eee;
+
+// /deep/ .mat-nav-list .mat-list-item :hover{
+//     background-color: grey;
+//     color: #eee;
 
 
-}
+// }
+
 /deep/ .mat-list-item-content{
     justify-content: center;
 }

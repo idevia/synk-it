@@ -1,18 +1,30 @@
 <app-navbar></app-navbar>
 <mat-sidenav-container class="example-container" >
   <mat-sidenav mode="side" opened>
+		
 	<mat-nav-list class="">
-	    <a mat-list-item routerLink="/links">link</a>
+
+			<mat-expansion-panel>
+				<mat-expansion-panel-header>
+				<a mat-list-item class="submenu"  routerLink="links">link</a>
+					
+				</mat-expansion-panel-header>
+			
+			<a mat-list-item routerLink="/all-links">All Links</a>
+			<a mat-list-item routerLink="/categoreis">Categories</a>
+				
+			</mat-expansion-panel>
+
+	    <a mat-list-item  routerLink="#">none</a>
 	    <a mat-list-item routerLink="#">none</a>
-	    <a mat-list-item routerLink="#">none</a>
-	    <a mat-list-item routerLink="#">none</a>
-	    <a mat-list-item routerLink="#">none</a>
+	    <a mat-list-item  routerLink="#">none</a>
+			<a mat-list-item  routerLink="#">none</a>
+	
 	</mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
 
 
-	<app-links></app-links>
-
+<router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

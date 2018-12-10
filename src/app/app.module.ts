@@ -15,6 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatExpansionModule } from '@angular/material/expansion';
 // angular material  api
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LinksComponent } from './pages/links/links.component';
 import { DialoglinksComponent } from './pages/links/dialoglinks/dialoglinks.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AllLinksComponent } from './pages/links/all-links/all-links.component';
+import { CategoriesComponent } from './pages/links/categories/categories.component';
 
 
 @NgModule({
@@ -39,7 +42,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     DashboardComponent,
     LinksComponent,
     DialoglinksComponent,
-    NavbarComponent
+    NavbarComponent,
+    AllLinksComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +63,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatDialogModule,
     MatSelectModule,
     MatPaginatorModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
