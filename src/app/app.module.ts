@@ -32,6 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AllLinksComponent } from './pages/links/all-links/all-links.component';
 import { CategoriesComponent } from './pages/links/categories/categories.component';
 import { DialognameComponent } from './pages/links/categories/dialogname/dialogname.component';
+import { NotesComponent } from './pages/links/notes/notes.component';
+import { NotesdialogComponent } from './pages/links/notes/notesdialog/notesdialog.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { DialognameComponent } from './pages/links/categories/dialogname/dialogn
     NavbarComponent,
     AllLinksComponent,
     CategoriesComponent,
-    DialognameComponent
+    DialognameComponent,
+    NotesComponent,
+    NotesdialogComponent
   ],
   imports: [
     BrowserModule,
@@ -70,6 +74,6 @@ import { DialognameComponent } from './pages/links/categories/dialogname/dialogn
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [LinksComponent, DialoglinksComponent,DialognameComponent]
+  entryComponents: [LinksComponent, DialoglinksComponent, DialognameComponent, NotesdialogComponent]
 })
 export class AppModule {}

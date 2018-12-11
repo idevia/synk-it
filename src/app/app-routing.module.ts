@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LinksComponent } from './pages/links/links.component';
 import { AllLinksComponent } from './pages/links/all-links/all-links.component';
 import { CategoriesComponent } from './pages/links/categories/categories.component';
+import { NotesComponent } from './pages/links/notes/notes.component';
 
 
 
@@ -28,6 +29,7 @@ const routes: Routes = [
                 children: [
                     { path: 'all-links', component: AllLinksComponent },
                     { path: 'categories', component: CategoriesComponent },
+                    { path: 'notes', component: NotesComponent },
 
                 ]
             },
