@@ -31,6 +31,7 @@ import { DialoglinksComponent } from './pages/links/dialoglinks/dialoglinks.comp
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AllLinksComponent } from './pages/links/all-links/all-links.component';
 import { CategoriesComponent } from './pages/links/categories/categories.component';
+import { DialognameComponent } from './pages/links/categories/dialogname/dialogname.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { CategoriesComponent } from './pages/links/categories/categories.compone
     DialoglinksComponent,
     NavbarComponent,
     AllLinksComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    DialognameComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +70,6 @@ import { CategoriesComponent } from './pages/links/categories/categories.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [LinksComponent, DialoglinksComponent]
+  entryComponents: [LinksComponent, DialoglinksComponent,DialognameComponent]
 })
 export class AppModule {}
