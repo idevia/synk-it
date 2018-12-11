@@ -19,25 +19,31 @@ const routes: Routes = [
     {
         path: 'dashboard', component: DashboardComponent,
         children: [
-            {
-                path: '',
-                redirectTo: 'links',
-                pathMatch: 'full'
-            },
-            {
-                path: 'links', component: LinksComponent,
-                children: [
-                    { path: 'all-links', component: AllLinksComponent },
-                    { path: 'categories', component: CategoriesComponent },
-                    { path: 'notes', component: NotesComponent },
-
-                ]
-            },
+          {
+              path: '',
+              redirectTo: 'links',
+              pathMatch: 'full'
+          },
+          {
+            path: 'links', component: LinksComponent,
+            children: [
+                { path: 'all', component: AllLinksComponent },
+                { path: 'categories', component: CategoriesComponent },
+                { path: '', redirectTo: '/dashboard/links/all', pathMatch: 'full' }
+            ]
+          },
+          {
+            path: 'notes', component: LinksComponent,
+            children: [
+              { path: 'all', component: NotesComponent },
+              { path: '', redirectTo: '/dashboard/notes/all', pathMatch: 'full' }
+            ]
+          },
 
         ]
     },
 
-]
+];
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule]
