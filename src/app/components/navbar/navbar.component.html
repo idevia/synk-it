@@ -4,5 +4,11 @@
   <!-- This fills the remaining space of the current row -->
   <span class="flex-spacer"></span>
 
-  <span>John Doe</span>
+
+  <button mat-button [matMenuTriggerFor]="menu"><img class="rounded-circle" src="https://i.stack.imgur.com/w2kfR.png" height="42" width="42"><span class="profile">John Doe</span></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Profile </button>
+    <button mat-menu-item>Logout</button>
+  </mat-menu>
+
 </mat-toolbar>

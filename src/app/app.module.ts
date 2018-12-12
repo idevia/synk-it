@@ -16,6 +16,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
 // angular material  api
 
 import { AppRoutingModule } from './app-routing.module';
@@ -34,6 +35,8 @@ import { CategoriesComponent } from './pages/links/categories/categories.compone
 import { DialognameComponent } from './pages/links/categories/dialogname/dialogname.component';
 import { NotesComponent } from './pages/links/notes/notes.component';
 import { NotesdialogComponent } from './pages/links/notes/notesdialog/notesdialog.component';
+import { NotecateoriesComponent } from './pages/links/notes/notecateories/notecateories.component';
+import { CategorydialogComponent } from './pages/links/notes/notecateories/categorydialog/categorydialog.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { NotesdialogComponent } from './pages/links/notes/notesdialog/notesdialo
     CategoriesComponent,
     DialognameComponent,
     NotesComponent,
-    NotesdialogComponent
+    NotesdialogComponent,
+    NotecateoriesComponent,
+    CategorydialogComponent
+
   ],
   imports: [
     BrowserModule,
@@ -70,10 +76,17 @@ import { NotesdialogComponent } from './pages/links/notes/notesdialog/notesdialo
     MatSelectModule,
     MatPaginatorModule,
     MatToolbarModule,
-    MatExpansionModule 
+    MatExpansionModule,
+    MatMenuModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [LinksComponent, DialoglinksComponent, DialognameComponent, NotesdialogComponent]
+  entryComponents: [
+      LinksComponent,
+      DialoglinksComponent, 
+      DialognameComponent,
+      NotesdialogComponent, 
+      CategorydialogComponent]
 })
 export class AppModule {}

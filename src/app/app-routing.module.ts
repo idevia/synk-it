@@ -8,6 +8,7 @@ import { LinksComponent } from './pages/links/links.component';
 import { AllLinksComponent } from './pages/links/all-links/all-links.component';
 import { CategoriesComponent } from './pages/links/categories/categories.component';
 import { NotesComponent } from './pages/links/notes/notes.component';
+import {NotecateoriesComponent} from './pages/links/notes/notecateories/notecateories.component';
 
 
 
@@ -35,8 +36,9 @@ const routes: Routes = [
           {
             path: 'notes', component: LinksComponent,
             children: [
-              { path: 'all', component: NotesComponent },
-              { path: '', redirectTo: '/dashboard/notes/all', pathMatch: 'full' }
+                { path: 'all', component: NotesComponent },
+                { path: 'notescategories', component: NotecateoriesComponent },
+                { path: '', redirectTo: '/dashboard/notes/all', pathMatch: 'full' }
             ]
           },
 

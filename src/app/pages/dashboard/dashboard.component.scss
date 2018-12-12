@@ -11,7 +11,11 @@
     // background-color: #4C0065;
     width: 320px;
 }
-
+ a {
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+}
 .btn-full {
   display: block;
 }
