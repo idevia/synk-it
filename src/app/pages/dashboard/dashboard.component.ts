@@ -1,6 +1,7 @@
 
-import { Component, ViewChild,OnInit,HostListener,Output,EventEmitter} from '@angular/core';
+import { Component, ViewChild,OnInit,HostListener} from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,7 @@ export class DashboardComponent implements OnInit{
   // @Input() message:string;
   // public sidenav:string;
   public visible: boolean = true ;
-
+  
     @ViewChild('side') side: MatSidenavModule;
   constructor() { }
 
@@ -26,4 +27,5 @@ export class DashboardComponent implements OnInit{
       this.side.open('side');//open undefined
     }
   }
+  
 }
