@@ -1,9 +1,11 @@
-<app-navbar></app-navbar>
-<mat-sidenav-container class="example-container" >
-  <mat-sidenav mode="side" opened>
+<app-navbar (open)="onOpen($event)" (close)="onClose($event)"></app-navbar>
+<mat-sidenav-container class="example-container">
 
-
-    <mat-expansion-panel>
+  
+ <mat-sidenav #side mode="side" opened="true"  (window:resize)="onResize($event)" [hidden]="!visible" >
+   <!-- <h1>clicked in navcompoennt {{sidenav}}</h1> -->
+<!-- - <button (click)="toogleSidenav()"> trigger</button>  -->
+    <mat-expansion-panel >
       <mat-expansion-panel-header>
         <a mat-list-item   routerLink="links">Bookmarks</a>
       </mat-expansion-panel-header>
@@ -24,6 +26,7 @@
       </mat-expansion-panel>
 
   </mat-sidenav>
+ 
   <mat-sidenav-content>
 
 

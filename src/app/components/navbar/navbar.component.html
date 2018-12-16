@@ -1,5 +1,7 @@
 <mat-toolbar color="primary">
-  <span>Synkit</span>
+ <button mat-button (click)="toogleSidenav()"> <mat-icon >menu</mat-icon></button>
+
+ <span>Synkit</span>
 
   <!-- This fills the remaining space of the current row -->
   <span class="flex-spacer"></span>
@@ -12,3 +14,4 @@
   </mat-menu>
 
 </mat-toolbar>
+{{message}}
