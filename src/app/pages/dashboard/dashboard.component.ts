@@ -1,6 +1,6 @@
 
-import { Component, ViewChild,OnInit,HostListener} from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { Component, ViewChild, OnInit, HostListener} from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 
 @Component({
@@ -8,24 +8,41 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit{
+export class DashboardComponent implements OnInit {
   // @Input() message:string;
   // public sidenav:string;
-  public visible: boolean = true ;
-  
-    @ViewChild('side') side: MatSidenavModule;
+  public visible: Boolean = true;
+
+  @ViewChild('side') side: MatSidenav;
   constructor() { }
 
   ngOnInit() {
   }
+
+  onOpen(e) {
+    console.log(e);
+  }
+
+  onClose(e) {
+    console.log(e);
+  }
+
+  onToggleSide(shouldOpen) {
+    if (shouldOpen) {
+      this.side.open();
+    } else {
+      this.side.close();
+    }
+  }
+
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if (event.target.innerWidth < 800) {
-      this.side.close('side');//close undefined
+      this.side.close(); // close undefined
     }
     if  (event.target.innerWidth > 800) {
-      this.side.open('side');//open undefined
+      this.side.open(); // open undefined
     }
   }
-  
+
 }

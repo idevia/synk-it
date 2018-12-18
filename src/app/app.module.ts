@@ -78,15 +78,15 @@ import { CategorydialogComponent } from './pages/links/notes/notecateories/categ
     MatToolbarModule,
     MatExpansionModule,
     MatMenuModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [
       LinksComponent,
-      DialoglinksComponent, 
+      DialoglinksComponent,
       DialognameComponent,
-      NotesdialogComponent, 
+      NotesdialogComponent,
       CategorydialogComponent]
 })
 export class AppModule {}

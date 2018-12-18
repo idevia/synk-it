@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,Input,EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 
 
 @Component({
@@ -8,9 +8,10 @@ import { Component, OnInit,Output,Input,EventEmitter} from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   // public hideMe:boolean;
-  public visible: boolean = true;
+  public visible: Boolean = true;
   @Output() open: EventEmitter<any> = new EventEmitter();
   @Output() close: EventEmitter<any> = new EventEmitter();
+  @Output() toggleSide: EventEmitter<any> = new EventEmitter();
   // @Output() sideEvent: EventEmitter<any> =new EventEmitter();
   // public sidenav ='sending message from nav component';
   constructor() { }
@@ -19,16 +20,15 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  toogleSidenav(){
+  toggleSidenav() {
     // this.open.emit(this.sideEvent);
 
       this.visible = !this.visible;
-      if (this.visible) {
-        this.open.emit(null);//open undefinde
-      } else {
-        this.close.emit(null);
-      }
-    
+      this.toggleSide.emit(this.visible);
+      // if (this.visible) {
+      //   this.open.emit(true); // open undefinde
+      // } else {
+      //   this.close.emit(false);
+      // }
   }
-  
 }
