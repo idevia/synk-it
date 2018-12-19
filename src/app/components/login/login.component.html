@@ -7,18 +7,27 @@
   </mat-card-header>
 
   <mat-card-content>
-  <form class="auth-form text-center">
+  <form class="auth-form text-center" [formGroup]="myForm">
 
     <mat-form-field appearance="outline">
       <mat-label class="matLabel">Enter email</mat-label>
-      <input matInput  placeholder="email@domain.com" >
+      <input matInput  placeholder="email@domain.com" formControlName="email" >
+     
       <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="email.invalid && email.touched">
+      email is invalid
+    </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="input-s">
       <mat-label class="matLabel" >Enter password</mat-label>
-      <input matInput type="password" placeholder="Your passwrod">
+      <input matInput type="password" formControlName="password" placeholder="Your passwrod">
+     
       <mat-icon matSuffix>lock</mat-icon>
+    <mat-hint >Must have one letter,One number</mat-hint>
+    <mat-error *ngIf="password.invalid && password.touched">
+      password is not correct
+    </mat-error>
     </mat-form-field>
 
     <div>
@@ -26,7 +35,7 @@
     </div>
  
       <div class="text-center text-btn">
-        <button mat-button mat-raised-button class="btn-cls" (click)="onSubmit()" >SIGN IN</button>
+        <button mat-button mat-raised-button class="btn-cls">SIGN IN</button>
       </div>
     
     </form>

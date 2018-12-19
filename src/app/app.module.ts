@@ -1,5 +1,8 @@
 import { NgModule  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+// import {  FormGroup, Val } from '@angular/forms';
+
 import 'rxjs';
 // angular material api
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatMenuModule } from '@angular/material/menu';
+
 // angular material  api
 
 import { AppRoutingModule } from './app-routing.module';
@@ -84,7 +88,9 @@ import { environment} from '../environments/environment';
     MatPaginatorModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatMenuModule,
+    MatMenuModule, ReactiveFormsModule, FormsModule,
+    
+    // firebase
     
     AngularFireModule.initializeApp(environment),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
