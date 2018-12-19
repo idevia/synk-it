@@ -11,7 +11,7 @@
 
     <mat-form-field appearance="outline">
       <mat-label class="matLabel">Enter email</mat-label>
-      <input matInput  placeholder="email@domain.com">
+      <input matInput  placeholder="email@domain.com" >
       <mat-icon matSuffix>email</mat-icon>
     </mat-form-field>
 
@@ -26,7 +26,7 @@
     </div>
  
       <div class="text-center text-btn">
-        <button mat-button mat-raised-button class="btn-cls">SIGN IN</button>
+        <button mat-button mat-raised-button class="btn-cls" (click)="onSubmit()" >SIGN IN</button>
       </div>
     
     </form>
@@ -41,7 +41,7 @@
 
     <div class="text-center">
           <a mat-fab class="btn-fab" routerLink=""><i class="fa fa-facebook font-icon" aria-hidden="true"></i></a>
-          <a mat-fab class="btn-fab" routerLink=""><img class="google-icon" src="./assets/images/image.png" alt="google"></a>
+          <a mat-fab class="btn-fab" routerLink="" (click)="loginGoogle()" ><img class="google-icon" src="./assets/images/image.png" alt="google"></a>
     </div>
       <div class="text-center signupBtn">
     <a mat-flat-button routerLink="/signup">Sign Up</a>

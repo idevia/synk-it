@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 
 
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,12 +11,12 @@ import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 export class NavbarComponent implements OnInit {
   // public hideMe:boolean;
   public visible: Boolean = true;
-  @Output() open: EventEmitter<any> = new EventEmitter();
-  @Output() close: EventEmitter<any> = new EventEmitter();
+  // @Output() open: EventEmitter<any> = new EventEmitter();
+  // @Output() close: EventEmitter<any> = new EventEmitter();
   @Output() toggleSide: EventEmitter<any> = new EventEmitter();
   // @Output() sideEvent: EventEmitter<any> =new EventEmitter();
   // public sidenav ='sending message from nav component';
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit() {
 
@@ -31,4 +33,5 @@ export class NavbarComponent implements OnInit {
       //   this.close.emit(false);
       // }
   }
+ 
 }

@@ -19,13 +19,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
 
-  onOpen(e) {
-    console.log(e);
-  }
-
-  onClose(e) {
-    console.log(e);
-  }
+  
 
   onToggleSide(shouldOpen) {
     if (shouldOpen) {
@@ -38,10 +32,10 @@ export class DashboardComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     if (event.target.innerWidth < 800) {
-      this.side.close(); // close undefined
+      this.side.close(); 
     }
     if  (event.target.innerWidth > 800) {
-      this.side.open(); // open undefined
+      this.side.open(); 
     }
   }
 

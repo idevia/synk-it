@@ -1,5 +1,6 @@
 import { NgModule  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import 'rxjs';
 // angular material api
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -37,7 +38,13 @@ import { NotesComponent } from './pages/links/notes/notes.component';
 import { NotesdialogComponent } from './pages/links/notes/notesdialog/notesdialog.component';
 import { NotecateoriesComponent } from './pages/links/notes/notecateories/notecateories.component';
 import { CategorydialogComponent } from './pages/links/notes/notecateories/categorydialog/categorydialog.component';
-
+//services
+import { AuthService } from '../core/auth.service';
+//firebase setup 
+import { AngularFireModule} from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -78,9 +85,13 @@ import { CategorydialogComponent } from './pages/links/notes/notecateories/categ
     MatToolbarModule,
     MatExpansionModule,
     MatMenuModule,
+    
+    AngularFireModule.initializeApp(environment),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule,
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   entryComponents: [
       LinksComponent,
