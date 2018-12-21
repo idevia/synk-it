@@ -15,7 +15,7 @@
 }
 .card-title{
     font-size: 20px;
-    
+
     font-weight: bold;
     font-family: Poppins;
     padding-top: 30px;
@@ -31,7 +31,7 @@
 
 
 mat-form-field {
-  width: 70%;
+  width: 80%;
 }
 .auth-form{
     padding-top: 40px;
@@ -42,7 +42,6 @@ mat-form-field {
 }
 .btn-cls{
     background-color: #BD59D4;
-
     color: #fff;
     width: 150px;
     border-radius: 30px;
@@ -51,21 +50,18 @@ mat-form-field {
 
 }
 
-/deep/ .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: white;
-  border: none;
-  border-radius: 15px;
-   box-shadow: 0px 0px 15px 0px #C0C0C0;
-}
+// /deep/ .mat-form-field-appearance-outline .mat-form-field-outline {
+//   color: white;
+//   // border: none;
+//   // border-radius: 15px;
+//    box-shadow: 0px 0px 15px 0px #C0C0C0;
+// }
 
 
 
 .btn-fab{
      background-color: #fff;
      text-align: center;
-
-
-
 }
 
 .font-icon{
@@ -77,9 +73,9 @@ mat-form-field {
     height: 25px;
 }
 .text-color{
-    padding-top: 10px;
-text-align: center;
- color: #C0C0C0;
+  padding-top: 10px;
+  text-align: center;
+  color: #C0C0C0;
 }
 .signupBtn{
     padding-top: 60px;

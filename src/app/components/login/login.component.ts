@@ -2,41 +2,38 @@
 import { Component, OnInit } from '@angular/core';
 // import { AuthService } from './../../../core/auth.service';
 // import { Router } from '@angular/router';
-import {FormBuilder,FormGroup,Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  
-  
+
 })
 export class LoginComponent implements OnInit {
-  myForm:FormGroup;
-  
-  constructor(private fb:FormBuilder) { }
+  signupform: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-    this.myForm = this.fb.group({
-       email:['',[
+    this.signupform = this.fb.group({
+       email: ['', [
            Validators.required,
            Validators.email
        ]],
-      password:['',[
-           Validators.required,
-        Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
-              
+      password: ['', [
+          Validators.required,
+          Validators.minLength(6)
+          // Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
        ]],
     });
- 
 
   }
 
- get email(){
-    return this.myForm.get('email');
+ get email() {
+    return this.signupform.get('email');
  }
- get password(){
-    return this.myForm.get('password');
+ get password() {
+    return this.signupform.get('password');
  }
 
 }

@@ -1,59 +1,62 @@
 <mat-card class="auth-card">
   <mat-card-header class="headerTitle">
-
-
-    <div mat-card-title  class="card-title ">Sign In</div>
-
+    <div mat-card-title class="card-title ">Sign In</div>
   </mat-card-header>
 
   <mat-card-content>
-  <form class="auth-form text-center" [formGroup]="myForm">
+    <form class="auth-form text-center" [formGroup]="signupform">
+      <mat-form-field appearance="outline">
+        <mat-label class="matLabel">Enter email</mat-label>
+        <input
+          matInput
+          placeholder="email@domain.com"
+          formControlName="email"
+        />
 
-    <mat-form-field appearance="outline">
-      <mat-label class="matLabel">Enter email</mat-label>
-      <input matInput  placeholder="email@domain.com" formControlName="email" >
-     
-      <mat-icon matSuffix>email</mat-icon>
-    <mat-error *ngIf="email.invalid && email.touched">
-      email is invalid
-    </mat-error>
-    </mat-form-field>
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="email.invalid && email.touched">
+          email is invalid
+        </mat-error>
+      </mat-form-field>
 
-    <mat-form-field appearance="outline" class="input-s">
-      <mat-label class="matLabel" >Enter password</mat-label>
-      <input matInput type="password" formControlName="password" placeholder="Your passwrod">
-     
-      <mat-icon matSuffix>lock</mat-icon>
-    <mat-hint >Must have one letter,One number</mat-hint>
-    <mat-error *ngIf="password.invalid && password.touched">
-      password is not correct
-    </mat-error>
-    </mat-form-field>
+      <mat-form-field appearance="outline" class="input-s">
+        <mat-label class="matLabel">Enter password</mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          placeholder="Your passwrod"
+        />
 
-    <div>
-      <a mat-flat-button routerLink="/forgot-password">forgot password ?</a>
-    </div>
- 
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-hint>Minimum 6 characters</mat-hint>
+        <mat-error *ngIf="password.invalid && password.touched">
+          Invalid password
+        </mat-error>
+      </mat-form-field>
+
+      <div>
+        <a mat-flat-button routerLink="/forgot-password">forgot password ?</a>
+      </div>
+
       <div class="text-center text-btn">
         <button mat-button mat-raised-button class="btn-cls">SIGN IN</button>
       </div>
-    
     </form>
 
-
-
-    <div class="text-color">
-      <p class=""> Or login with</p>
-    </div>
+    <div class="text-color"><p class="">Or login with</p></div>
   </mat-card-content>
   <mat-card-actions>
-
     <div class="text-center">
-          <a mat-fab class="btn-fab" routerLink=""><i class="fa fa-facebook font-icon" aria-hidden="true"></i></a>
-          <a mat-fab class="btn-fab" routerLink="" (click)="loginGoogle()" ><img class="google-icon" src="./assets/images/image.png" alt="google"></a>
+      <a mat-fab class="btn-fab" routerLink=""
+        ><i class="fa fa-facebook font-icon" aria-hidden="true"></i
+      ></a>
+      <a mat-fab class="btn-fab" routerLink="" (click)="loginGoogle()"
+        ><img class="google-icon" src="./assets/images/image.png" alt="google"
+      /></a>
     </div>
-      <div class="text-center signupBtn">
-    <a mat-flat-button routerLink="/signup">Sign Up</a>
-      </div>
-</mat-card-actions>
+    <div class="text-center signupBtn">
+      <a mat-flat-button routerLink="/signup">Sign Up</a>
+    </div>
+  </mat-card-actions>
 </mat-card>
