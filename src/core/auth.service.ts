@@ -1,38 +1,54 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
-import {AngularFirestore} from '@angular/fire/firestore';
-// import * as firebase from 'firebase/app';
-// import { Observable } from 'rxjs';
+import * as firebase from 'firebase/app';
 // import { Router } from '@angular/router';
-// import { map } from 'rxjs/operators';
+
+// import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
-  constructor(private afAuth: AngularFireAuth, private db: AngularFirestore) {
-    // this.afAuth.authState.subscribe(auth => console.log(auth));
+error:any;
+authState : any;
+  constructor(private afAuth: AngularFireAuth) {
+    this.afAuth.authState.subscribe((auth) => {
+      this.authState = auth
+    });
+  }
+  loginWithGoogle() {
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+  login(email, password) {
+    // return new Observable.fromPromise(
+    // return new Promise<any>((resolve, reject) => {
+    return this.afAuth.auth.signInWithEmailAndPassword(email, password)
+    
+    
+    
+    
+    //     .then(userData => resolve(userData),
+    //       err => reject(err));
+    // });
+  }
+  
+  // }
+  signupForm(email,password) {
+    return new Promise<any>((resolve, reject)=>{
+     this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+       .then(userData =>resolve(userData),
+         err => reject(err));
+    }); 
+  }
+  resetPassword(email) {
+    return this.afAuth.auth.sendPasswordResetEmail(email)
+      .then(() => console.log('sent Password Reset Email!'))
+      .catch((error) => console.log(error))
+  }
+  signOut() {
+    this.afAuth.auth.signOut();
   }
 
-  // login(email: string, password: string) {
-  //   return new Promise((resolove, reject) => {
-  //     this.afAuth.auth
-  //       .signInWithEmailAndPassword(email, password)
-  //       .then(userData => resolove(userData), err => reject(err));
-  //   });
-  // }
-  // getAuth() {
-  //   return this.afAuth.authState.subscribe(auth => auth);
-  // }
-  // logout() {
-  //   this.afAuth.auth.signOut();
-  // }
-  // register(email: string, password: string) {
-  //   return new Promise((resolove, reject) => {
-  //     this.afAuth.auth
-  //       .createUserWithEmailAndPassword(email, password)
-  //       .then(userData => resolove(userData), err => reject(err));
-  //   });
-  // }
+  //test
+  
 }

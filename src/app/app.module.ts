@@ -1,7 +1,9 @@
+// import { firebaseonfig } from './../environments/environment';
 import { NgModule  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
-// import {  FormGroup, Val } from '@angular/forms';
+// import {  FormGroup } from '@angular/forms';
 
 import 'rxjs';
 // angular material api
@@ -47,8 +49,18 @@ import { AuthService } from '../core/auth.service';
 //firebase setup 
 import { AngularFireModule} from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-import { environment} from '../environments/environment';
+/*  */
+const firebaseconfig = {
+  apiKey: "AIzaSyA5o8zK2Cx2Wih0XYbkF7avDSNzNTYr5Js",
+  authDomain: "test-synk-it.firebaseapp.com",
+  databaseURL: "https://test-synk-it.firebaseio.com",
+  projectId: "test-synk-it",
+  storageBucket: "test-synk-it.appspot.com",
+  messagingSenderId: "582135063032"
+
+};
 
 @NgModule({
   declarations: [
@@ -89,12 +101,14 @@ import { environment} from '../environments/environment';
     MatToolbarModule,
     MatExpansionModule,
     MatMenuModule, ReactiveFormsModule, FormsModule,
+    HttpModule,
     
     // firebase
     
-    AngularFireModule.initializeApp(environment),
+    AngularFireModule.initializeApp(firebaseconfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule,
+    AngularFireDatabaseModule
 
   ],
   providers: [AuthService],

@@ -6,14 +6,6 @@ export const environment = {
   production: false
 };
 
-export const firebaseonfig = {
-  apiKey: 'AIzaSyA5o8zK2Cx2Wih0XYbkF7avDSNzNTYr5Js',
-  authDomain: 'test-synk-it.firebaseapp.com',
-  databaseURL: 'https://test-synk-it.firebaseio.com',
-  projectId: 'test-synk-it',
-  storageBucket: 'test-synk-it.appspot.com',
-  messagingSenderId: '582135063032'
-};
 
 /*
  * In development mode, for easier debugging, you can ignore zone related error

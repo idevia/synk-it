@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
+import { AuthService } from './../../../core/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -16,7 +18,7 @@ export class NavbarComponent implements OnInit {
   @Output() toggleSide: EventEmitter<any> = new EventEmitter();
   // @Output() sideEvent: EventEmitter<any> =new EventEmitter();
   // public sidenav ='sending message from nav component';
-  constructor( ) { }
+  constructor(private af: AuthService, private router: Router ) { }
 
   ngOnInit() {
 
@@ -33,5 +35,8 @@ export class NavbarComponent implements OnInit {
       //   this.close.emit(false);
       // }
   }
- 
+  signOut() {
+
+    this.router.navigate(['/login']);
+  }
 }

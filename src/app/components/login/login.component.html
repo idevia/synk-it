@@ -4,7 +4,10 @@
   </mat-card-header>
 
   <mat-card-content>
-    <form class="auth-form text-center" [formGroup]="signupform">
+    <form class="auth-form text-center" [formGroup]="signupform" (ngSubmit)="login()" >
+      <mat-error *ngIf="errorMessage">
+          {{ errorMessage }}
+        </mat-error>
       <mat-form-field appearance="outline">
         <mat-label class="matLabel">Enter email</mat-label>
         <input
@@ -51,7 +54,7 @@
       <a mat-fab class="btn-fab" routerLink=""
         ><i class="fa fa-facebook font-icon" aria-hidden="true"></i
       ></a>
-      <a mat-fab class="btn-fab" routerLink="" (click)="loginGoogle()"
+      <a mat-fab class="btn-fab" routerLink="" (click)="loginWithGoogle()"
         ><img class="google-icon" src="./assets/images/image.png" alt="google"
       /></a>
     </div>

@@ -1,16 +1,23 @@
 <div mat-dialog-content>
-  <form>
+  <form [formGroup]="dialogLinksForm">
   <mat-form-field class="dialogForm">
-  <input matInput placeholder=" Name" value="Name">
+  <input matInput placeholder=" Name" value="Name" formControlName="name"> 
 
  </mat-form-field>
+  <!-- <mat-error *ngIf = "name.invalid && (name.dirty || name.touched)">
+    enter the name
+  </mat-error> -->
+
   <mat-form-field class="dialogForm">
-  <input matInput placeholder="Add Link" value="Add Link">
+  <input matInput placeholder="Add Link" value="Add Link" formControlName="link" (keydown.space)="$event.preventDefault()" required>
 
  </mat-form-field>
-<mat-form-field class="dialogForm">
-  <mat-select placeholder="Category"  value="Category" >
-    <mat-option value="uncategorized">Uncategorized</mat-option>
+<!-- <mat-error *ngIf = "link.invalid && (link.dirty || name.touched)">
+  enter the name
+</mat-error> -->
+ <mat-form-field class="dialogForm">
+  <mat-select placeholder="Category"  value="Category"  required>
+    <mat-option>Uncategorized</mat-option>
     <mat-option value="option1">Option 1</mat-option>
     <mat-option value="option2">Option 2</mat-option>
     <mat-option value="option3">Option 3</mat-option>

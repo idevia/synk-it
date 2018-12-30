@@ -8,7 +8,7 @@
 
   <mat-card-content>
 
-  <form class="auth-form text-center" [formGroup]="signupForm">
+  <form class="auth-form text-center" [formGroup]="signupForm"   (ngSubmit)="submitForm()"  >
 
     <mat-form-field appearance="outline">
       <mat-label class="matLabel">Enter email</mat-label>

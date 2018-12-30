@@ -1,3 +1,4 @@
+import { FormGroup,FormBuilder,Validators} from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialoglinks.component.scss']
 })
 export class DialoglinksComponent implements OnInit {
-
-  constructor() { }
+  dialogLinksForm: FormGroup;
+  constructor(private fb:FormBuilder) { }
 
   ngOnInit() {
+     this.dialogLinksForm = this.fb.group({
+      name: ['', [
+        Validators.required,
+        Validators.minLength(4)
+      ]],
+      link: ['', [
+        Validators.required,
+       
+      ]],
+    });
   }
 
 }
