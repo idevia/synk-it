@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder ,Validators,FormGroup} from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from './../../../core/auth.service';
+import { UserService } from 'src/core/user.service';
+import { User } from './../../../core/modals/user';
 
 // import { AngularFirestore } from 'angularfire2/firestore';
 @Component({
@@ -10,25 +12,30 @@ import { AuthService } from './../../../core/auth.service';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  signupForm: FormGroup;
+  // signupForm: FormGroup;
+  user: User = {
+        email:'',
+    
+  } 
   error:any;
-  
+  users: User[];
   errorMessage:any;
   successMessage:any;
-  constructor(private fb: FormBuilder,private af:AuthService, private router:Router ) { }
+  constructor(private fb: FormBuilder,private af:AuthService, private router:Router,private userService:UserService ) { }
 
+  signupForm = this.fb.group({
+  email: ['', [
+    Validators.required,
+    Validators.email
+  ]],
+  password: ['', [
+    Validators.required,
+    Validators.minLength(6),
+  ]],
+});
   ngOnInit() {
-    this.signupForm = this.fb.group({
-      email: ['', [
-        Validators.required,
-        Validators.email
-      ]],
-      password: ['', [
-        Validators.required,
-        Validators.minLength(6),
-      ]],
-    });
-
+    
+   
 
   }
 
@@ -44,6 +51,7 @@ export class SignupComponent implements OnInit {
       .then((res) =>{
         if (res.user.emailVerified !== true){
           console.log('email not verified verify the emial');
+          
           this.router.navigate(['/login']);
         }
         else{    

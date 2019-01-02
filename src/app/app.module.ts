@@ -46,6 +46,7 @@ import { NotecateoriesComponent } from './pages/links/notes/notecateories/noteca
 import { CategorydialogComponent } from './pages/links/notes/notecateories/categorydialog/categorydialog.component';
 //services
 import { AuthService } from '../core/auth.service';
+import { UserService } from '../core/user.service';
 //firebase setup 
 import { AngularFireModule} from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -108,10 +109,13 @@ const firebaseconfig = {
     AngularFireModule.initializeApp(firebaseconfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    // AngularFirestoreCollection, 
+    // AngularFirestoreDocument,
+    //  AngularFirestore
 
   ],
-  providers: [AuthService],
+  providers: [AuthService,UserService],
   bootstrap: [AppComponent],
   entryComponents: [
       LinksComponent,
