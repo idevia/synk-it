@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  // public hideMe:boolean;
+  
+    // public hideMe:boolean;
   public visible: Boolean = true;
   // @Output() open: EventEmitter<any> = new EventEmitter();
   // @Output() close: EventEmitter<any> = new EventEmitter();

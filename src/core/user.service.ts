@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-
   users: Observable<any[]>;
   constructor(db: AngularFireDatabase) {
     this.users = db.list('users').valueChanges();

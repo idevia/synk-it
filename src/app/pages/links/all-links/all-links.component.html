@@ -22,16 +22,20 @@
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        <td mat-cell *matCellDef="let lists">{{lists.name}}</td>
       </ng-container>
 
       <!-- link Column -->
       <ng-container matColumnDef="link">
         <th mat-header-cell *matHeaderCellDef> Link </th>
         <td mat-cell *matCellDef="let element"> <a href="{{element.link}}" target="_blank">{{element.link}}</a> </td>
+        <td mat-cell *matCellDef="let lists">{{lists.link}}</td>
       </ng-container>
       <ng-container matColumnDef="category">
         <th mat-header-cell *matHeaderCellDef> Category </th>
         <td mat-cell *matCellDef="let element"> {{element.category}}</td>
+              <td mat-cell *matCellDef="let lists">{{lists.category}}</td>
+
       </ng-container>
 
       <!-- action Column -->

@@ -1,11 +1,13 @@
+import { LinkserviceService } from './pages/links/services/linkservice.service';
 // import { firebaseonfig } from './../environments/environment';
 import { NgModule  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 // import {  FormGroup } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
-import 'rxjs';
+// import 'rxjs';
 // angular material api
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -102,7 +104,7 @@ const firebaseconfig = {
     MatToolbarModule,
     MatExpansionModule,
     MatMenuModule, ReactiveFormsModule, FormsModule,
-    HttpModule,
+    HttpModule, HttpClientModule ,
     
     // firebase
     
@@ -115,7 +117,7 @@ const firebaseconfig = {
     //  AngularFirestore
 
   ],
-  providers: [AuthService,UserService],
+  providers: [AuthService,UserService,LinkserviceService],
   bootstrap: [AppComponent],
   entryComponents: [
       LinksComponent,

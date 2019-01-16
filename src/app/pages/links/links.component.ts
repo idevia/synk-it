@@ -28,7 +28,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class LinksComponent implements OnInit {
   // @ViewChild(MatPaginator) paginator: MatPaginator;
   // displayedColumns: string[] = ['sno', 'name', 'link', 'category', 'action'];
-  // dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  dataSource = new MatTableDataSource<PeriodicElement>();
   // dataSource = ELEMENT_DATA;
   constructor() { }
   ngOnInit() {

@@ -1,22 +1,22 @@
 <div mat-dialog-content>
-  <form [formGroup]="dialogLinksForm">
+  <form [formGroup]="dialogLinksForm" >
   <mat-form-field class="dialogForm">
-  <input matInput placeholder=" Name" value="Name" formControlName="name"> 
-
- </mat-form-field>
-  <!-- <mat-error *ngIf = "name.invalid && (name.dirty || name.touched)">
-    enter the name
-  </mat-error> -->
-
-  <mat-form-field class="dialogForm">
-  <input matInput placeholder="Add Link" value="Add Link" formControlName="link" (keydown.space)="$event.preventDefault()" required>
-
- </mat-form-field>
-<!-- <mat-error *ngIf = "link.invalid && (link.dirty || name.touched)">
+  <input matInput placeholder=" Name" value="Name" formControlName="name" id="name"> 
+<mat-error *ngIf="name.invalid && name.touched">
   enter the name
-</mat-error> -->
+</mat-error>
+
+ </mat-form-field>
+
+  <mat-form-field class="dialogForm">
+  <input matInput placeholder="Add Link" value="Add Link"  formControlName="link" (keydown.space)="$event.preventDefault()" id="link" >
+<mat-error *ngIf="link.invalid && (link.dirty || name.touched)">
+  Enter the link must Not contain spaces
+</mat-error>
+ </mat-form-field>
+
  <mat-form-field class="dialogForm">
-  <mat-select placeholder="Category"  value="Category"  required>
+  <mat-select placeholder="Category"   value="Category" formControlName="category" id="category" required>
     <mat-option>Uncategorized</mat-option>
     <mat-option value="option1">Option 1</mat-option>
     <mat-option value="option2">Option 2</mat-option>
@@ -27,5 +27,5 @@
 </div>
 <div mat-dialog-actions class="dialog-btn">
   <button mat-button [mat-dialog-close]="" cdkFocusInitial>Cancel</button>
-  <button mat-raised-button color="primary" (click)="onNoClick()">Add Link</button>
+  <button mat-raised-button color="primary"  (click)="confirmAdd()" >Add Link</button>
 </div>

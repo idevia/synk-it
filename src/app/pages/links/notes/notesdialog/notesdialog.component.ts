@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-notesdialog',
   templateUrl: './notesdialog.component.html',
@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotesdialogComponent implements OnInit {
 
-  constructor() { }
+  dialogLinksForm: FormGroup;
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-  }
+    this.dialogLinksForm = this.fb.group({
+      name: ['', [
+        Validators.required,
+        Validators.minLength(4)
+      ]],
+      textarea: ['', [
+        Validators.required,
 
+      ]],
+    });
+  }
+  get name() {
+    return this.dialogLinksForm.get("name");
+  }
+  get textarea() {
+    return this.dialogLinksForm.get("textarea");
+  }
 }

@@ -1,3 +1,4 @@
+import { AngularFireDatabase } from '@angular/fire/database';
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
@@ -11,18 +12,20 @@ import * as firebase from 'firebase/app';
 export class AuthService {
 error:any;
 authState : any;
-  constructor(private afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth,private db:AngularFireDatabase) {
     this.afAuth.authState.subscribe((auth) => {
       this.authState = auth
     });
   }
   loginWithGoogle() {
     return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    
   }
   login(email, password) {
     // return new Observable.fromPromise(
     // return new Promise<any>((resolve, reject) => {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
+    
     
     
     
